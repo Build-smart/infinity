@@ -1,0 +1,29 @@
+Developer Notes For Buildermart Distributor App
+
+Customer Raise The Order 
+
+Need to generate the purchase orders for every order 
+
+Purchase order will be generated as per the distributor products. The Distributors and distributor price are assigned while adding Products.
+
+After the purchase order is generated the wallet date to be added immediately after purchase raised.
+
+Purchase order will display in the distributor app accordingly for every distributor.
+
+Distributor will update the order status accordingly.
+
+If the order amount is not matched to market prizes, the distributor can modify the roundup amount. The amount will update “roundup_purchaseorder_amount” column 
+And “roundup_cashdiscount_final_amount” with tax calculated
+
+If the order is dispatched the buildermart team will verify the order and they will update the order to complete 
+
+The order amount will display immediately after the order is completed in the pending wallet till the wallet date is less than or equal to today's date.
+
+If the distributor wants the order amount to be paid immediately he will give the discount to the amount, the discount will update in column ”cashdiscount_purchaseorder_amount” or he will wait till the wallet date. If he gives the discount the buildermart team will accept or reject the offer. If they accept the discount the amount should be released immediately(The discount amount will be minus from “roundup_cashdiscount_final_amount” and it will update in the same column), if they reject the discount offer  the distributor will need to wait until the wallet date is less than 
+
+or equal to today's date. Any of the columns is updated when the discount is rejected.
+
+ After the wallet is less than or equal to today's date the amount will display in the wallet. Then the distributor raises a request to release the amount .
+. After the distributor raises the request the buildermart team will send the amount manually with different transactions available. Then update the status from the admin panel to paid.
+
+Then the paid amount  will display in paid history.
